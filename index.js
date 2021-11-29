@@ -22,6 +22,7 @@ const writeFileAsync = util.promisify(fs.writeFile);
 // start function to define questions about the team members
 function questions () {
     return inquirer.prompt ([
+        // questions about the manager
         {
             type: 'input',
              name: 'managerName',
@@ -42,6 +43,8 @@ function questions () {
              name: 'managerNumber',
              message: 'What is the phone number of the manager?'
          },
+         
+         // questions about the engineer
          {
              type: 'input',
               name: 'engineerName',
@@ -62,6 +65,8 @@ function questions () {
               name: 'engineerGitHub',
               message: 'What is the GitHub username of the engineer?'
           },
+
+          // questions about the intern
           {
              type: 'input',
               name: 'internName',
